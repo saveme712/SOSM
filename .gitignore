@@ -1,0 +1,14 @@
+
+*.log
+*.tlog
+*.ilk
+*.recipe
+*.txt
+*.obj
+*.idb
+*.pdb
+*.dll
+*.i64
+*.exp
+*.lib
+*.exe
