@@ -2,6 +2,19 @@
 #include <Windows.h>
 #include <cstdint>
 
+#ifdef API
+#define SDK_IMPORT_EXPORT \
+extern "C" \
+__declspec(dllimport)
+#else
+#define SDK_IMPORT_EXPORT \
+extern "C" \
+__declspec(dllexport)
+#endif
+
+#define SDK_EXPORT extern "C" \
+__declspec(dllexport)
+
 typedef void* (*Il2cppDomainGet)();
 typedef void** (*Il2cppDomainGetAssemblies)(void* domain, uint64_t* count);
 typedef void* (*Il2cppAssemblyGetImage)(void* image);

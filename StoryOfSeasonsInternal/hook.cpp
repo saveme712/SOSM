@@ -13,9 +13,7 @@
 /// <param name="dst">The hook to call before the original.</param>
 /// <param name="original">A pointer to the original instructions.</param>
 /// <returns>If the hook was injected successfully or not.</returns>
-extern "C" 
-__declspec(dllexport)
-bool
+SDK_EXPORT bool
 inject_hook(
 	_In_ void* src,
 	_In_ void* dst,
@@ -52,9 +50,7 @@ _ret:
 /// <param name="dst">The hook to call before the original.</param>
 /// <param name="original">A pointer to the original instructions.</param>
 /// <returns>If the hook was injected successfully or not.</returns>
-extern "C" 
-__declspec(dllexport)
-bool
+SDK_EXPORT bool
 inject_hook_mono(
 	_In_ const char* klass,
 	_In_ const char* method,

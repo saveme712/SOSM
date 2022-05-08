@@ -1,36 +1,18 @@
 #pragma once
 #include "common.h"
 
-extern "C"
-#ifdef API
-__declspec(dllimport)
-#else
-__declspec(dllexport)
-#endif
-void* 
+SDK_IMPORT_EXPORT void* 
 find_class_by_name(
 	_In_ const char* name
 );
 
-extern "C"
-#ifdef API
-__declspec(dllimport)
-#else
-__declspec(dllexport)
-#endif
-size_t
+SDK_IMPORT_EXPORT size_t
 find_field_offset_by_name(
     _In_ const char* klass,
     _In_ const char* field
 );
 
-extern "C"
-#ifdef API
-__declspec(dllimport)
-#else
-__declspec(dllexport)
-#endif
-void*
+SDK_IMPORT_EXPORT void*
 find_method_rva_by_name(
     _In_ const char* klass,
     _In_ const char* method,

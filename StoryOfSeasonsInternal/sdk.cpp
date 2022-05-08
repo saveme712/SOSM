@@ -8,7 +8,7 @@ GameMetaCache mc;
 /// DLLs for any reason.
 /// </summary>
 /// <param name="plugin">The plugin to register.</param>
-extern "C" void 
+SDK_EXPORT void 
 register_plugin(
 	_In_ Plugin plugin
 )
